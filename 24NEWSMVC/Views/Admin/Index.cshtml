@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <div class="AdminPanel">
+        <h1 class="page-header" style="text-align: center;">Admin Panel</h1>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-9 col-sm-offset-3 col-md-7 col-md-offset-2 main formContainer"
+                    style="margin-left: 380px;">
+                    <hr />
+                    <div class="viewButtons">
+                        <a asp-controller="Admin" asp-action="author" title="View Authors Page" class="vBtn">Authors <i class="fa fa-user" style=" font-size:15px; margin-left:5px;margin-top:3px;"></i></a>
+                        <a asp-controller="Admin" asp-action="articles" title="View Articles Page" class="vBtn">Articles <i class="fa fa-newspaper-o" style=" font-size:16px; margin-left:5px;margin-top:3px;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

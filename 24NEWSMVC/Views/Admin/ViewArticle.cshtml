@@ -1,0 +1,65 @@
+﻿@model _24NEWSMVC.ViewModels.ArticleViewModel
+@{
+    ViewData["Title"] = "ViewArticle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+   <div class="container-fluid" style="margin-bottom:150px;">
+        <div class="row">
+
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main formContainer"
+                style="margin-left: 170px;">
+
+
+                <form enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title"></label>
+                        <input type="text" class="form-control" id="title" placeholder="Title" value="@Model.Title" disabled>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-7 col-md-9">
+                            <div class="form-group formTextArea">
+                                <textarea name="content" id="content" disabled style="height: 660px;">@Model.ArticleBody</textarea>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-md-3">
+                             <div class="form-group">
+                                <label for="published">Creation Date</label>
+                                <input type="date" class="form-control" id="created" value="@Model.CreationDate.ToString("yyyy-MM-dd")"  disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="published">Publication Date</label>
+                                <input type="date" class="form-control" id="published" value="@Model.PublicationDate.ToString("yyyy-MM-dd")"  disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="authors_id">Author</label>
+                                <input type="text" class="form-control" id="authors_id" value="@Model.AuthorName" disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="blockqoute">Block Qoute</label>
+                                <textarea name="blockqoute" class="form-control" rows="2" style="resize: vertical;"
+                                    disabled>@Model.BlockQoute</textarea>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <a class="thumbnail">
+                                    <img src="/getarticleimgbyid/@Model.Id"  id="artPrev" alt="Article Image" height="300"
+                                        width="370">
+
+                                </a>
+                            </div>
+                            <div class="form-group">
+                                <a asp-controller="Admin" asp-action="articles" class="btn btn-danger"
+                                    style="color: white; text-decoration: none;">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+    </div>
+

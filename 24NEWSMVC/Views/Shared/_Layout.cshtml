@@ -1,0 +1,247 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>24 News</title>
+    <link href="~/css/media_query.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap CSS -->
+    <link href="~/css/style_1.css" rel="stylesheet" type="text/css" />
+    <!-- Modernizr JS -->
+    <script src="~/js/modernizr-3.5.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/8dd4217118.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+  <div class="container-fluid fh5co_header_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 fh5co_mediya_center"><a class="color_fff fh5co_mediya_setting"><i
+                            class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp;@DateTime.Today.ToString("dddd,MM MMM yyyy")</a>
+                    <div class="d-inline-block fh5co_trading_posotion_relative"><a href="#trendingSection"
+                            class="treding_btn">Trending</a>
+                        <div class="fh5co_treding_position_absolute"></div>
+                    </div>
+                    <a class="color_fff fh5co_mediya_setting">Are you looking for a one-stop news destination? Look no
+                        further than 24 News</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 fh5co_padding_menu">
+                    <img src="~/images/logo.png" alt="img" class="fh5co_logo_width" />
+                </div>
+
+                <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
+
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table" asp-controller="Admin" asp-action="login" title="Login">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-user" style="color:red"></i>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+
+                    <div class="text-center d-inline-block" onclick="showSearchInput()">
+                        <a class="fh5co_display_table">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-search"></i></div>
+                        </a>
+                    </div>
+
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table" href="https://www.linkedin.com/in/abanoub-rafaat-73a7a4221/"
+                            target="_blank">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-linkedin-square"></i></div>
+                        </a>
+                    </div>
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table" href="https://github.com/Abanoub98" target="_blank">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-github"></i></div>
+                        </a>
+                    </div>
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table" href="https://orcid.org/0000-0003-4386-4135" target="_blank">
+                            <div class="fh5co_verticle_middle"><i class="fa-brands fa-orcid"></i></div>
+                        </a>
+                    </div>
+
+                    <div class="searchBox">
+                            
+                        <input class="searchInput" type="text" name="" placeholder="Search">
+                        <button class="searchBtn" type="submit" >
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                          
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-faded fh5co_padd_mediya padding_786">
+        <div class="container padding_786">
+            <nav class="navbar navbar-toggleable-md navbar-light ">
+                <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                <a class="navbar-brand" href="#"><img src="~/images/logo.png" alt="img" class="mobile_logo_width" /></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="index">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" asp-controller="Home" asp-action="about">About <span class="sr-only">(current)</span></a>
+                        </li>
+
+
+                        <li class="nav-item ">
+                            <a class="nav-link" asp-controller="Home" asp-action="contact">Contact <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    </header>
+    
+            @RenderBody()
+
+    <footer class="border-top footer text-muted">
+       <div class="container-fluid fh5co_footer_bg pb-3">
+        <div class="container animate-box">
+            <div class="row">
+                <div class="col-12 spdp_right py-5"><img src="~/images/white_logo.png" alt="img" class="footer_logo" />
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="footer_main_title py-3"> About</div>
+                    <div class="footer_sub_about pb-3"> Are you looking for a one-stop news destination? Look no further
+                        than our 24-hour news website is your source for up-to-date,
+                        reliable information on current events and trending topics.
+                        Take a deep dive into the stories that matter to you and join us in understanding what’s
+                        happening in the world.
+                    </div>
+                    <div class="footer_mediya_icon" style="cursor:pointer;">
+                        <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                                <div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div>
+                            </a></div>
+                        <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                                <div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div>
+                            </a></div>
+                        <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                                <div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div>
+                            </a></div>
+                        <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                                <div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 col-lg-2">
+                    <div class="footer_main_title py-3"> Category</div>
+                    <ul class="footer_menu">
+                        <li><a><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Business</a></li>
+                        <li><a><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Entertainment</a></li>
+                        <li><a><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Environment</a></li>
+                        <li><a><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Health</a></li>
+                        <li><a><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Life style</a></li>
+                        <li><a><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Politics</a></li>
+                        <li><a><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Technology</a></li>
+                        <li><a><i class="fa fa-angle-right"></i>&nbsp;&nbsp; World</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-5 col-lg-3 position_footer_relative" id="trendingSection">
+                    <div class="footer_main_title py-3"> Top Views</div>
+                    <div class="footer_makes_sub_font"> DEC 31, 2023</div>
+                    <a class="footer_post pb-4"> Dozens die in one northern Indian district as temperatures reach 46C </a>
+                    <div class="footer_makes_sub_font"> FEB 9, 2023</div>
+                    <a class="footer_post pb-4"> China’s appeal soars among Arab youth amid changing dynamics in Middle East </a>
+                    <div class="footer_makes_sub_font"> MAY 10, 2023</div>
+                    <a class="footer_post pb-4"> Momentum building in Iran talks with West, says source </a>
+                    <div class="footer_position_absolute"><img src="~/images/footer_sub_tipik.png" alt="img"
+                            class="width_footer_sub_img" /></div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 ">
+                    <div class="footer_main_title py-3"> News of the Year</div>
+                    <a  class="footer_img_post_6"><img src="~/images/allef-vinicius-108153.jpg" alt="img" /></a>
+                    <a  class="footer_img_post_6"><img src="~/images/32-450x260.jpg" alt="img" /></a>
+                    <a  class="footer_img_post_6"><img src="~/images/download (1).jpg" alt="img" /></a>
+                    <a  class="footer_img_post_6"><img src="~/images/science-578x362.jpg" alt="img" /></a>
+                    <a  class="footer_img_post_6"><img src="~/images/vil-son-35490.jpg" alt="img" /></a>
+                    <a  class="footer_img_post_6"><img src="~/images/zack-minor-15104.jpg" alt="img" /></a>
+                    <a  class="footer_img_post_6"><img src="~/images/download.jpg" alt="img" /></a>
+                    <a  class="footer_img_post_6"><img src="~/images/download (2).jpg" alt="img" /></a>
+                    <a  class="footer_img_post_6"><img src="~/images/ryan-moreno-98837.jpg" alt="img" /></a>
+                </div>
+            </div>
+            <div class="row justify-content-center pt-2 pb-4">
+                <div class="col-12 col-md-8 col-lg-7 ">
+                    <div class="input-group">
+                        <span class="input-group-addon fh5co_footer_text_box" id="basic-addon1"><i
+                                class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control fh5co_footer_text_box" placeholder="Enter your email..."
+                            aria-describedby="basic-addon1">
+                        <a class="input-group-addon fh5co_footer_subcribe" id="basic-addon12"> <i
+                                class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid fh5co_footer_right_reserved">
+        <div class="container">
+            <div class="row  ">
+                <div class="col-12 col-md-6 py-4 Reserved"> © Copyright 2023, All rights reserved. Design by <a
+                        href="https://www.linkedin.com/in/abanoub-rafaat-73a7a4221/">Abanoub Rafaat</a>. </div>
+                <div class="col-12 col-md-6 spdp_right py-4">
+                    <a asp-controller="Home" asp-action="index" class="footer_last_part_menu">Home</a>
+                    <a asp-controller="Home" asp-action="about" class="footer_last_part_menu">About</a>
+                    <a asp-controller="Home" asp-action="contact" class="footer_last_part_menu">Contact</a>
+                    <a asp-controller="Admin" asp-action="login" class="footer_last_part_menu">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+
+     <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <!-- Waypoints -->
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <!-- Main -->
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

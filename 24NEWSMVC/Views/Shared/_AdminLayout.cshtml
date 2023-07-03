@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <title>@ViewData["Title"] - _24NEWSMVC</title>
+    <link href="~/css/media_query.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+    <!-- Bootstrap CSS -->
+    <link href="~/css/style_1.css" rel="stylesheet" type="text/css" />
+    <!-- Modernizr JS -->
+    <script src="~/js/modernizr-3.5.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/8dd4217118.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+        <header>
+            <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 fh5co_padding_menu">
+                    <img src="~/images/logo.png" alt="img" class="fh5co_logo_width" />
+                </div>
+                <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table" title="Login" asp-controller="Admin" asp-action="logout" >
+                            <div class="fh5co_verticle_middle"><i class="fa fa-user" style="color:green"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table" href="https://www.facebook.com/xXlBebolXx/"
+                            target="_blank">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-facebook-square"></i></div>
+                        </a>
+                    </div>
+
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table" href="https://www.linkedin.com/in/abanoub-rafaat-73a7a4221/"
+                            target="_blank">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-linkedin-square"></i></div>
+                        </a>
+                    </div>
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table" href="https://github.com/Abanoub98" target="_blank">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-github"></i></div>
+                        </a>
+                    </div>
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table" href="https://orcid.org/0000-0003-4386-4135" target="_blank">
+                            <div class="fh5co_verticle_middle"><i class="fa-brands fa-orcid"></i></div>
+                        </a>
+                    </div>
+
+                    <!--<div class="d-inline-block text-center"><img src="images/country.png" alt="img" class="fh5co_country_width"/></div>-->
+                    <div class="searchBox">
+
+                        <input class="searchInput" type="text" name="" placeholder="Search">
+                        <button class="searchBtn" href="#">
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+     </header>
+    
+            @RenderBody()
+
+    <footer class="border-top footer text-muted">
+         <div class="container-fluid fh5co_footer_right_reserved">
+        <div class="container">
+            <div class="row  ">
+                <div class="col-12 col-md-6 py-4 Reserved"> © Copyright 2023, All rights reserved. Design by <a
+                        href="https://www.linkedin.com/in/abanoub-rafaat-73a7a4221/">Abanoub Rafaat</a>. </div>
+                <div class="col-12 col-md-6 spdp_right py-4">
+                    <a asp-controller="Home" asp-action="index" class="footer_last_part_menu">Home</a>
+                    <a asp-controller="Home" asp-action="about" class="footer_last_part_menu">About</a>
+                    <a asp-controller="Admin" asp-action="author" title="View Authors Page" class="footer_last_part_menu">Authors</a>
+                    <a asp-controller="Admin" asp-action="articles" title="View Articles Page" class="footer_last_part_menu">Articles</a>
+                    <a asp-controller="Admin" asp-action="logout" title="Logout" class="footer_last_part_menu">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+       <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+        </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <!-- Waypoints -->
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <!-- Main -->
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

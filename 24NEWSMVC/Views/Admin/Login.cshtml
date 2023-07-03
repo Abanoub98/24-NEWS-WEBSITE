@@ -1,0 +1,68 @@
+﻿@model _24NEWSMVC.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Login Page";
+    Layout = null;
+}
+
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/css/login.css">
+
+</head>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-lg-5">
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="mx-auto d-flex justify-content-center mb-3">
+
+                            <img src="~/images/logo.png" height="80">
+
+                        </div>
+                        <form asp-controller="Admin" asp-action="login" class="login-form">
+                               @Html.AntiForgeryToken()
+                             @Html.ValidationMessage("LoginState", new { @style = "color:red;text-align:center;display:block;" })
+                            <div class="form-group">
+                                <input type="text" class="form-control rounded-left" asp-for="Email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group d-flex">
+                                <input type="password" class="form-control rounded-left" asp-for="Password" placeholder="Password"
+                                    required>
+                                <button id="showPasswordBtn" onclick="showPassword()" type="button" 
+                                    style=" height: 30px; align-content: center; align-self: center; margin-left: -40px; border: none; background-color: transparent;">
+                                    <i class="fa fa-eye-slash" id="showPasswordIcon"></i>
+                                </button>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn rounded submit px-3"
+                                    style="background-color: black; color: white;">Login</button>
+
+                                <a asp-controller="Home" asp-action="index" class="form-control btn rounded submit px-3" style="background-color: #f5bc04; color: white; margin-top:10px">Home</a>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>

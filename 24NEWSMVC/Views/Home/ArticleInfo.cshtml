@@ -1,0 +1,78 @@
+﻿@model _24NEWSMVC.ViewModels.ArticleViewModel
+@{
+    ViewData["Title"] = "Article Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+ <div class="container-fluid paddding mb-5">
+        <div class="row mx-0 justify-content-center">
+            <div class="col-md-7 col-12 paddding animate-box" data-animate-effect="fadeIn">
+               
+                     <div class="fh5co_suceefh5co_height"><img src="/getarticleimgbyid/@Model.Id" alt="img" />
+                    <div class="fh5co_suceefh5co_height_position_absolute"></div>
+
+                    <div class="fh5co_suceefh5co_height_position_absolute_font">
+                                       <div class=""><a asp-controller="Home" asp-action="articleinfo" asp-route-id="@Model.Id" class="fh5co_good_font">@Model.Title</a></div>
+                        <div class="">                       
+                            <i class="fa fa-clock-o"></i> Published: @Model.PublicationDate.ToString("MMMM dd,yyyy") 
+                            <br />
+                             <i class="fa fa-clock-o"></i> Created: @Model.CreationDate.ToString("MMMM dd,yyyy") 
+                              <br />
+                              <i class="fa fa-user"></i> By: @Model.AuthorName 
+                               <br />
+                            </div>
+         
+                    </div>
+                    </div>
+                 
+            
+            </div>
+      </div>
+  </div>
+
+
+<div id="fh5co-single-content"   style="z-index:0" class="container-fluid pb-4 pt-4 paddding">
+    <div class="container paddding">
+        <div class="row mx-0">
+            <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
+
+                @if(Model.BlockQoute!=null)
+                {
+                    <div class="outerBox">
+                        <blockquote class="innerBlock">
+                            “@Model.BlockQoute” The person said.
+                        </blockquote>
+                    </div>
+                }
+                 <br /> 
+                 <br />
+                <p>
+                   @Model.ArticleBody
+                </p>
+            </div>
+            <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Tags</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="fh5co_tags_all">
+                    <a  class="fh5co_tagg">Business</a>
+                    <a  class="fh5co_tagg">Technology</a>
+                    <a  class="fh5co_tagg">Sport</a>
+                    <a  class="fh5co_tagg">Art</a>
+                    <a  class="fh5co_tagg">Lifestyle</a>
+                    <a  class="fh5co_tagg">Three</a>
+                    <a  class="fh5co_tagg">Photography</a>
+                    <a  class="fh5co_tagg">Lifestyle</a>
+                    <a  class="fh5co_tagg">Art</a>
+                    <a  class="fh5co_tagg">Education</a>
+                    <a  class="fh5co_tagg">Social</a>
+                    <a  class="fh5co_tagg">Three</a>
+                </div>
+         
+            </div>
+        </div>
+    </div>
+</div>

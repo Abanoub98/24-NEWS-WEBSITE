@@ -1,0 +1,69 @@
+﻿@model IEnumerable<_24NEWSMVC.ViewModels.AuthorViewModel>
+@{
+    ViewData["Title"] = "Author";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <div class="addAuthor" style="margin-bottom: 197px;">
+        <h1 class="page-header" style="text-align: center;">Authors</h1>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-9 col-sm-offset-3 col-md-7 col-md-offset-2 main formContainer"
+                    style="margin-left: 380px;">
+                    <a asp-controller="Admin" asp-action="createauthor" class="btn btn-success"><i class="fa fa-plus-circle"></i></a>
+                    <hr />
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered" id="authorsTable">
+                            <thead>
+                                <tr>
+                                    <th> </th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Bio</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @{
+                                int counter = 1;
+                                foreach (var item in Model) {
+
+                                  <tr>
+                                    <td>@counter</td>
+                                    <td><a href="View_author.html" class="viewAuthor"> @Html.DisplayFor(modelItem => item.Name)</a></td>
+                                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                   <td><textarea rows="1" cols="40" disabled>@Html.DisplayFor(modelItem => item.Bio)</textarea></td>
+                                    <td>
+
+                                        <a asp-controller="Admin" asp-action="editauthor" asp-route-id="@item.Id" class="btn btn-xs btn-primary">
+                                            <i class="fa fa-edit"></i>
+                                            Edit
+                                        </a>
+                                        <a asp-controller="Admin" asp-action="viewauthor" asp-route-id="@item.Id" class="btn btn-xs btn-default btn-info">
+                                            <i class="fa fa-eye"></i>
+                                            View
+                                        </a>
+                                        <a asp-controller="Admin" asp-action="deleteauthor" asp-route-id="@item.Id" class="btn btn-xs btn-danger"
+                                        onclick="return confirm('Are you sure you want to delete the Author => @item.Name ?')">
+                                            <i class="fa fa-trash"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                                   
+                                    counter++;
+                                }
+                                 }
+                           
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
